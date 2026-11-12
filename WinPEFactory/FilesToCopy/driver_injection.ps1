@@ -7,7 +7,7 @@
 # - Success: reboot (not shutdown), so Windows is running again (the migration needs the VM running).
 #   The reboot passes the "Press any key to boot from CD" prompt without a key press and boots Windows.
 # - Error: no reboot, VM stays in WinPE, the message stays visible on the console.
-#   A successful Windows logon alone proves nothing -> run Export-NetConfig.ps1 afterwards (checks completed.txt + drivers).
+#   A successful Windows logon alone proves nothing -> check C:\virtio-inject\completed.txt (or run the add-on Prepare-KvmMigration.ps1).
 
 $ErrorActionPreference = "SilentlyContinue"
 
